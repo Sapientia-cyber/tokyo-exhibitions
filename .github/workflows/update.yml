@@ -1,0 +1,87 @@
+name: 会期データ更新とデプロイ
+
+on:
+  schedule:
+    - cron: "0 20 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "scraper/**"
+      - ".github/workflows/update.yml"
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+          cache: pip
+          cache-dependency-path: scraper/requirements.txt
+      - name: 依存関係をインストール
+        run: |
+          pip install -r scraper/requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: 会期データを収集
+        if: github.event_name != 'push'
+        run: python scraper/fetch.py
+      - name: 変更があればコミット
+        if: github.event_name != 'push'
+        run: |
+          if [[ -z "$(git status --porcelain data/)" ]]; then
+            echo "変更なし"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "会期データ更新 $(TZ=Asia/Tokyo date +%Y-%m-%d)"
+          git push
+      - name: ページをビルド
+        run: python site/build.py
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: 収集結果のサマリ
+        if: always()
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, collections, datetime as dt
+          d = json.load(open("data/exhibitions.json", encoding="utf-8"))
+          ex = d["exhibitions"]
+          names = {v["id"]: v["name"] for v in d["venues"]}
+          c = collections.Counter(e["venue"] for e in ex)
+          today = str(dt.date.today())
+          print(f"## 会期データ {d['generatedAt']}\n")
+          print(f"- 収録 **{len(ex)}件** / {len(c)}館")
+          print(f"- 開催中 **{sum(1 for e in ex if e['start'] <= today <= e['end'])}件**\n")
+          print("| 館 | 件数 |\n|---|---|")
+          for vid, n in c.most_common():
+              print(f"| {names.get(vid, vid)} | {n} |")
+          missing = [names[v] for v in names if v not in c]
+          if missing:
+              print(f"\n**0件だった館**: {', '.join(missing)}")
+          PY
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
