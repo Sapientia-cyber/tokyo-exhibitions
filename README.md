@@ -1,8 +1,9 @@
 # 東京美術館 会期表
 
-東京の主要27館の展覧会を、**会期のガントチャート**と**一覧表**で横断的に見るページ。
-GitHub Actions が毎朝データを取得し、ビルドして **GitHub Pages** に公開する。
-GitHubの中だけで完結する。
+東京の主要館の展覧会を、**会期のガントチャート**と**一覧表**で横断的に見るページ。
+GitHub Actions が毎朝データを取得してコミットし、**Cloudflare Pages** がその push を
+検知してビルド・公開する。**Basic認証でパスワードをかけているので、公開URLでも
+パスワードを知っている人しか見られない。**
 
 ```
 会期表
@@ -15,19 +16,21 @@ GitHubの中だけで完結する。
 │   ├── template.html          ← アプリ本体（__DATA__ を埋める）
 │   ├── build.py               ← template + json → dist/（標準ライブラリのみ）
 │   └── *.png                  ← ホーム画面用アイコン
-├── .python-version            ← Actions が読む Python のバージョン
+├── functions/
+│   └── _middleware.js         ← Cloudflare Pages Functions。全ページに Basic認証をかける
+├── .python-version            ← ビルドが読む Python のバージョン
 ├── .gitattributes             ← 改行コードを LF に固定（Windows対策）
+├── .gitignore
 └── .github/workflows/update.yml
 ```
-
 毎朝5時（日本時間）に1本のワークフローが走る。
 
     収集 (Playwright) → data/exhibitions.json を更新・コミット
-                      → site/build.py で dist/ を生成
-                      → GitHub Pages にデプロイ
+                      → (Cloudflare Pages が push を検知)
+                      → site/build.py で dist/ を生成 → 公開
 
-設定画面もデプロイ履歴もGitHubの中に1か所だけ。外部サービスとの連携がないぶん、
-壊れる箇所が少ない。
+データの取得はGitHub側、ビルドと公開はCloudflare側、という役割分担。
+リポジトリ自体は公開（public）のままだが、**サイトの閲覧にはパスワードが必要**。
 
 ## セットアップ
 
@@ -40,30 +43,59 @@ git remote add origin git@github.com:<あなた>/tokyo-exhibitions.git
 git push -u origin main
 ```
 
-### 2. GitHub Pages を有効にする
+### 2. Cloudflare Pages にこのリポジトリをつなぐ
 
-リポジトリの **Settings → Pages** で、Source を **GitHub Actions** にする。
-（`gh-pages` ブランチは使わない。ビルド成果物はコミットしない方式）
+Cloudflare ダッシュボード → **Workers & Pages** → **Create** → **Pages** →
+**Connect to Git** でこのリポジトリを選ぶ。
 
-> privateリポジトリで Pages を使うには有料プランが必要。
-> publicにできないなら、末尾の「Cloudflare Pages に移すとき」を参照。
+| 項目 | 値 |
+|---|---|
+| Framework preset | None |
+| Build command | `python3 site/build.py` |
+| Build output directory | `dist` |
 
-### 3. 初回実行
+「Save and Deploy」で初回デプロイが走る。完了すると
+`https://tokyo-exhibitions-xxx.pages.dev` のようなURLが発行される
+（あとで自分のドメインに変えることもできる）。
 
-**Actions** タブ →「会期データ更新とデプロイ」→ **Run workflow**。
+### 3. パスワードをかける
 
-完了すると `https://<あなた>.github.io/tokyo-exhibitions/` が発行される。
+Cloudflare ダッシュボード → このPagesプロジェクト → **Settings** →
+**Environment variables** で、次の2つを **Secret**（暗号化）として追加する。
+
+| 変数名 | 値 |
+|---|---|
+| `SITE_USER` | 好きなユーザー名（例: `tokyo`） |
+| `SITE_PASSWORD` | 好きなパスワード |
+
+追加したら **Deployments** タブ → 最新のデプロイの「…」→
+**Retry deployment** でもう一度デプロイし直す（環境変数は次のデプロイから
+効くため）。以降、サイトを開くとブラウザ標準のID・パスワード入力画面が出る。
+
+> `functions/_middleware.js` がこの認証をやっている。`SITE_USER` /
+> `SITE_PASSWORD` のどちらかが未設定のままだと**認証なし（誰でも見える）**
+> になるので、設定を忘れないこと。
+
+### 4. GitHub Actions を初回実行
+
+**Actions** タブ →「会期データ更新」→ **Run workflow**。
+
 実行結果のサマリに館ごとの件数と「0件だった館」が出るので、そこを確認する。
+コミットが発生すると Cloudflare Pages が自動でビルド・再デプロイする。
 
 以降は毎朝5時（日本時間）に自動で回る。
 
 > スケジュール実行は、リポジトリが60日間まったく動きがないと GitHub 側で
 > 自動停止される。停止したらActionsタブから再度有効化する。
 
-### 4. iPhoneのホーム画面に置く
+### 5. iPhoneのホーム画面に置く
 
-発行されたURLをSafariで開き、共有ボタン →「ホーム画面に追加」。
-manifest とアイコンを同梱してあるので、アドレスバーなしの全画面で起動する。
+発行されたURL（`.pages.dev`）をSafariで開き、ID・パスワードを入力。
+共有ボタン →「ホーム画面に追加」。manifest とアイコンを同梱してあるので、
+アドレスバーなしの全画面で起動する。
+
+> パスワード入力はSafariが記憶してくれるので、ホーム画面アイコンからの
+> 起動では毎回聞かれるわけではない（Safariの設定次第）。
 
 ## ローカルで動かす
 
@@ -78,6 +110,8 @@ open dist/index.html
 ```
 
 `site/build.py` は標準ライブラリしか使わないので、`pip install` なしでも動く。
+（`functions/_middleware.js` はCloudflare Pages上でのみ動作し、ローカルの
+`dist/index.html` を直接開いたときには関与しない）
 
 ## 取得の仕組み
 
@@ -163,30 +197,17 @@ dict(id="setagaya", name="世田谷美術館", short="世田谷", area="世田�
   }]
 }
 ```
-
 ## 免責
 
 会期は公式サイトからの機械収集。休館日・会期変更・展示替えは反映されない。
 来館前に必ず公式ページで確認すること。
 
-## Cloudflare Pages に移すとき
+## セキュリティについて
 
-privateリポジトリにしたい、アクセス解析やアクセス制御を足したい、といった理由で
-Cloudflareに寄せたくなったら、次の3つだけ変える。
-
-1. ワークフローから `upload-pages-artifact` 以降と `deploy` ジョブを削る
-   （収集してコミットするところまでで止める）
-2. Cloudflare ダッシュボード → **Workers & Pages** → **Create** → **Pages** →
-   **Connect to Git** でこのリポジトリを選ぶ
-
-   | 項目 | 値 |
-   |---|---|
-   | Framework preset | None |
-   | Build command | `python3 site/build.py` |
-   | Build output directory | `dist` |
-
-3. リポジトリの Settings → Pages で GitHub Pages を無効にする（二重配信を避ける）
-
-ビルドは標準ライブラリしか使わないので、Cloudflare側の設定はこれだけで足りる
-（`.python-version` と `_headers` は最初から同梱してある）。
-HTMLとmanifestの参照はすべて相対パスなので、どちらで配信しても同じまま動く。
+- `functions/_middleware.js` によるBasic認証は、**個人利用や家族・友人内での
+  共有には十分な強さ**だが、`SITE_USER`/`SITE_PASSWORD` は平文でブラウザに
+  送られる（TLSで暗号化はされる）。より強いアクセス制御（メールでのログイン等）
+  が欲しくなったら、Cloudflare **Zero Trust → Access** でアプリケーションを
+  登録する方法に切り替えられる（`_middleware.js` は不要になる）。
+- リポジトリ自体（GitHubの`data/exhibitions.json`やコード）は公開のままなので、
+  非公開にしたい情報は置かないこと。
