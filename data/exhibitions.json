@@ -1,0 +1,123 @@
+{
+  "generatedAt": "2026-09-12",
+  "region": "東京",
+  "venues": [
+    { "id": "tnm", "name": "東京国立博物館", "short": "東博", "area": "台東区", "station": "上野", "url": "https://www.tnm.jp/" },
+    { "id": "nmwa", "name": "国立西洋美術館", "short": "西美", "area": "台東区", "station": "上野", "url": "https://www.nmwa.go.jp/" },
+    { "id": "tobikan", "name": "東京都美術館", "short": "都美", "area": "台東区", "station": "上野", "url": "https://www.tobikan.jp/" },
+    { "id": "ueno-mori", "name": "上野の森美術館", "short": "上野の森", "area": "台東区", "station": "上野", "url": "https://www.ueno-mori.org/" },
+    { "id": "geidai", "name": "東京藝術大学大学美術館", "short": "藝大美術館", "area": "台東区", "station": "上野", "url": "https://museum.geidai.ac.jp/" },
+    { "id": "nact", "name": "国立新美術館", "short": "新美", "area": "港区", "station": "乃木坂", "url": "https://www.nact.jp/" },
+    { "id": "mori", "name": "森美術館", "short": "森美", "area": "港区", "station": "六本木", "url": "https://www.mori.art.museum/jp/" },
+    { "id": "2121", "name": "21_21 DESIGN SIGHT", "short": "21_21", "area": "港区", "station": "六本木", "url": "https://www.2121designsight.jp/" },
+    { "id": "shiodome", "name": "パナソニック汐留美術館", "short": "汐留", "area": "港区", "station": "新橋", "url": "https://panasonic.co.jp/ew/museum/" },
+    { "id": "nezu", "name": "根津美術館", "short": "根津", "area": "港区", "station": "表参道", "url": "https://www.nezu-muse.or.jp/" },
+    { "id": "teien", "name": "東京都庭園美術館", "short": "庭園", "area": "港区", "station": "目黒", "url": "https://www.teien-art-museum.ne.jp/" },
+    { "id": "kemco", "name": "慶應義塾ミュージアム・コモンズ", "short": "KeMCo", "area": "港区", "station": "三田", "url": "https://kemco.keio.ac.jp/" },
+    { "id": "momat", "name": "東京国立近代美術館", "short": "近美", "area": "千代田区", "station": "竹橋", "url": "https://www.momat.go.jp/" },
+    { "id": "mimt", "name": "三菱一号館美術館", "short": "一号館", "area": "千代田区", "station": "東京", "url": "https://mimt.jp/" },
+    { "id": "tsg", "name": "東京ステーションギャラリー", "short": "ステギャラ", "area": "千代田区", "station": "東京", "url": "https://www.ejrcf.or.jp/gallery/" },
+    { "id": "artizon", "name": "アーティゾン美術館", "short": "アーティゾン", "area": "中央区", "station": "京橋", "url": "https://www.artizon.museum/" },
+    { "id": "mot", "name": "東京都現代美術館", "short": "MOT", "area": "江東区", "station": "清澄白河", "url": "https://www.mot-art-museum.jp/" },
+    { "id": "top", "name": "東京都写真美術館", "short": "写美", "area": "目黒区", "station": "恵比寿", "url": "https://topmuseum.jp/" },
+    { "id": "mmat", "name": "目黒区美術館", "short": "目黒区美", "area": "目黒区", "station": "目黒", "url": "https://mmat.jp/" },
+    { "id": "operacity", "name": "東京オペラシティ アートギャラリー", "short": "オペラシティ", "area": "新宿区", "station": "初台", "url": "https://www.operacity.jp/ag/" },
+    { "id": "sompo", "name": "SOMPO美術館", "short": "SOMPO", "area": "新宿区", "station": "新宿", "url": "https://www.sompo-museum.org/" },
+    { "id": "icc", "name": "NTTインターコミュニケーション・センター [ICC]", "short": "ICC", "area": "新宿区", "station": "初台", "url": "https://www.ntticc.or.jp/" },
+    { "id": "shoto", "name": "渋谷区立松濤美術館", "short": "松濤", "area": "渋谷区", "station": "渋谷", "url": "https://shoto-museum.jp/" },
+    { "id": "ota", "name": "太田記念美術館", "short": "太田記念", "area": "渋谷区", "station": "原宿", "url": "https://www.ukiyoe-ota-muse.jp/" },
+    { "id": "yamatane", "name": "山種美術館", "short": "山種", "area": "渋谷区", "station": "恵比寿", "url": "https://www.yamatane-museum.jp/" },
+    { "id": "edohaku", "name": "東京都江戸東京博物館", "short": "江戸博", "area": "墨田区", "station": "両国", "url": "https://www.edo-tokyo-museum.or.jp/" },
+    { "id": "yayoi", "name": "弥生美術館", "short": "弥生", "area": "文京区", "station": "根津", "url": "https://www.yayoi-yumeji-museum.jp/" }
+  ],
+  "exhibitions": [
+    { "venue": "nact", "title": "ピカソ meets ポール・スミス 遊び心の冒険へ", "start": "2026-06-10", "end": "2026-09-21", "category": "企画展", "url": "https://www.nact.jp/exhibition_special/2026/picasso_paulsmith/" },
+    { "venue": "nact", "title": "ルーヴル美術館展 ルネサンス", "start": "2026-09-09", "end": "2026-12-13", "category": "企画展", "url": "https://www.nact.jp/exhibition_special/2026/louvre2026/" },
+    { "venue": "nact", "title": "少女漫画・インフィニティ 萩尾望都×山岸凉子×大和和紀 三人展", "start": "2026-10-28", "end": "2027-02-08", "category": "企画展", "url": "https://www.nact.jp/exhibition_special/2026/shojomanga/" },
+
+    { "venue": "momat", "title": "杉本博司 絶滅写真", "start": "2026-06-16", "end": "2026-09-13", "category": "企画展", "url": "https://www.momat.go.jp/exhibitions/569" },
+    { "venue": "momat", "title": "所蔵作品展 MOMATコレクション（5/26–9/13）", "start": "2026-05-26", "end": "2026-09-13", "category": "コレクション展", "url": "https://www.momat.go.jp/exhibitions/r8-1" },
+    { "venue": "momat", "title": "生誕120周年 長谷川三郎と国立近代美術館", "start": "2026-05-26", "end": "2026-09-13", "category": "小企画", "url": "https://www.momat.go.jp/exhibitions/r8-1-g4" },
+    { "venue": "momat", "title": "所蔵作品展 MOMATコレクション（9/29–1/11）", "start": "2026-09-29", "end": "2027-01-11", "category": "コレクション展", "url": "https://www.momat.go.jp/exhibitions/r8-2" },
+    { "venue": "momat", "title": "あみ・ど・ぱり 巴里の日本人芸術家たち", "start": "2026-09-29", "end": "2027-01-11", "category": "小企画", "url": "https://www.momat.go.jp/exhibitions/r8-2-g4" },
+    { "venue": "momat", "title": "竹久夢二 時代を創る表現者", "start": "2026-10-23", "end": "2027-01-11", "category": "企画展", "url": "https://www.momat.go.jp/exhibitions/570" },
+    { "venue": "momat", "title": "速水御舟展（仮称）", "start": "2027-03-19", "end": "2027-05-09", "category": "企画展", "url": "https://www.momat.go.jp/exhibitions/572" },
+
+    { "venue": "tobikan", "title": "開館100周年記念 この場所の風景―上野・大牟田・ブエノスアイレス", "start": "2026-07-23", "end": "2026-10-07", "category": "企画展", "url": "https://www.tobikan.jp/exhibition/2026_viewsofthisplace.html" },
+    { "venue": "tobikan", "title": "開館100周年記念 大英博物館日本美術コレクション 百花繚乱～海を越えた江戸絵画", "start": "2026-07-25", "end": "2026-10-18", "category": "特別展", "url": "https://www.tobikan.jp/exhibition/2026_britishmuseum.html" },
+    { "venue": "tobikan", "title": "開館100周年記念 オルセー美術館所蔵 いまを生きる歓び", "start": "2026-11-14", "end": "2027-03-28", "category": "特別展", "url": "https://www.tobikan.jp/exhibition/2026_orsay.html" },
+    { "venue": "tobikan", "title": "開館100周年記念 あなたが世界を読むために", "start": "2026-11-19", "end": "2027-01-11", "category": "企画展", "url": "https://www.tobikan.jp/exhibition/2026_waysofreading.html" },
+    { "venue": "tobikan", "title": "はじまりをひらく 東京都美術館の100年", "start": "2026-11-19", "end": "2027-01-11", "category": "コレクション展", "url": "https://www.tobikan.jp/exhibition/2026_archives.html" },
+    { "venue": "tobikan", "title": "デュフィ展", "start": "2027-04-24", "end": "2027-08-22", "category": "特別展", "url": "https://www.tobikan.jp/exhibition/2027_dufy.html" },
+    { "venue": "tobikan", "title": "レンブラントからモネ、ゴッホ ハマー美術館展", "start": "2027-09-11", "end": "2027-12-12", "category": "特別展", "url": "https://www.tobikan.jp/exhibition/2027_hammer.html" },
+
+    { "venue": "nmwa", "title": "コレクション・イン・フォーカス", "start": "2026-03-28", "end": "2027-01-15", "category": "コレクション展", "url": "https://www.nmwa.go.jp/jp/exhibitions/2026CinF.html" },
+    { "venue": "nmwa", "title": "【特集展示】「昭和100年」昭和時代 当館における保存修復の変遷", "start": "2026-06-30", "end": "2027-01-11", "category": "特集展示", "url": "https://www.nmwa.go.jp/jp/exhibitions/2026showa100.html" },
+    { "venue": "nmwa", "title": "【特集展示】クロード・モネ没後100周年", "start": "2026-07-22", "end": "2026-09-23", "category": "特集展示", "url": "https://www.nmwa.go.jp/jp/exhibitions/2026monet100.html" },
+    { "venue": "nmwa", "title": "版画家レンブラント 挑戦、継承、インパクト", "start": "2026-07-07", "end": "2026-09-23", "category": "企画展", "url": "https://www.nmwa.go.jp/jp/exhibitions/2026rembrandt.html" },
+    { "venue": "nmwa", "title": "神話、寓意、祝祭——ルネサンスからバロックにおけるイタリア宮廷と版画", "start": "2026-06-30", "end": "2026-10-12", "category": "小企画展", "url": "https://www.nmwa.go.jp/jp/exhibitions/2026italy.html" },
+    { "venue": "nmwa", "title": "テート美術館 ターナー展──崇高の絵画、現代美術との対話", "start": "2026-10-24", "end": "2027-02-21", "category": "企画展", "url": "https://www.nmwa.go.jp/jp/exhibitions/" },
+
+    { "venue": "mori", "title": "ロン・ミュエク", "start": "2026-04-29", "end": "2026-09-23", "category": "企画展", "url": "https://www.mori.art.museum/jp/exhibitions/ronmueck/index.html" },
+    { "venue": "mori", "title": "MAMコレクション022：ティモテウス・アンガワン・クスノ", "start": "2026-04-29", "end": "2026-09-23", "category": "コレクション展", "url": "https://www.mori.art.museum/jp/exhibitions/mamcollection022/index.html" },
+    { "venue": "mori", "title": "MAMスクリーン023：ジョシュ・クライン", "start": "2026-04-29", "end": "2026-09-23", "category": "小企画", "url": "https://www.mori.art.museum/jp/exhibitions/mamscreen023/index.html" },
+    { "venue": "mori", "title": "MAMリサーチ012：ディアスポラ・メモリー", "start": "2026-04-29", "end": "2026-09-23", "category": "小企画", "url": "https://www.mori.art.museum/jp/exhibitions/mamresearch012/index.html" },
+    { "venue": "mori", "title": "森万里子：燦燦", "start": "2026-10-31", "end": "2027-03-28", "category": "企画展", "url": "https://www.mori.art.museum/jp/exhibitions/marikomori/index.html" },
+    { "venue": "mori", "title": "MAMスクリーン024：ジャッカワーン・ニンタムロン", "start": "2026-10-31", "end": "2027-03-28", "category": "小企画", "url": "https://www.mori.art.museum/jp/exhibitions/mamscreen024/index.html" },
+    { "venue": "mori", "title": "MAMプロジェクト035：ブリー・ルエイ", "start": "2026-10-31", "end": "2027-03-28", "category": "小企画", "url": "https://www.mori.art.museum/jp/exhibitions/mamproject035/index.html" },
+    { "venue": "mori", "title": "森アートアワード2026 グランプリ受賞記念展：片山真理", "start": "2026-10-31", "end": "2027-03-28", "category": "小企画", "url": "https://www.mori.art.museum/jp/exhibitions/moricaf2026/index.html" },
+    { "venue": "mori", "title": "世界はあそびでできている：アート・子ども・社会", "start": "2027-04-29", "end": "2027-09-23", "category": "企画展", "url": "https://www.mori.art.museum/jp/exhibitions/play/index.html" },
+
+    { "venue": "top", "title": "出光真子 おんなのさくひん――ある映像作家の自伝", "start": "2026-06-18", "end": "2026-09-21", "category": "企画展", "url": "https://topmuseum.jp/exhibition/5417/" },
+    { "venue": "top", "title": "TOPコレクション 明日の食卓", "start": "2026-07-02", "end": "2026-09-21", "category": "コレクション展", "url": "https://topmuseum.jp/exhibition/5419/" },
+    { "venue": "top", "title": "複製される感性－森山大道", "start": "2026-09-05", "end": "2026-10-18", "category": "小企画", "url": "https://topmuseum.jp/exhibition/12474/" },
+    { "venue": "top", "title": "ふたたびくみたてる 日本の新進作家 vol.23", "start": "2026-09-30", "end": "2027-01-17", "category": "企画展", "url": "https://topmuseum.jp/exhibition/5423/" },
+    { "venue": "top", "title": "デュエット――アジアン・コンテンポラリー", "start": "2026-09-30", "end": "2027-01-17", "category": "企画展", "url": "https://topmuseum.jp/exhibition/5421/" },
+    { "venue": "top", "title": "木村伊兵衛写真賞第50回記念写真展", "start": "2026-10-31", "end": "2026-11-23", "category": "企画展", "url": "https://topmuseum.jp/exhibition/5478/" },
+
+    { "venue": "operacity", "title": "ほぼ空 青木淳 + リチャード・タトル", "start": "2026-07-18", "end": "2026-09-23", "category": "企画展", "url": "https://www.operacity.jp/ag/exh300/" },
+    { "venue": "operacity", "title": "収蔵品展087 青木淳が選ぶコレクション（寺田コレクションより）", "start": "2026-07-18", "end": "2026-09-23", "category": "コレクション展", "url": "https://www.operacity.jp/ag/" },
+    { "venue": "operacity", "title": "project N 103 東山詩織", "start": "2026-07-18", "end": "2026-09-23", "category": "小企画", "url": "https://www.operacity.jp/ag/" },
+    { "venue": "operacity", "title": "種と根っこ―都市の耕し方", "start": "2026-10-17", "end": "2026-12-20", "category": "企画展", "url": "https://www.operacity.jp/ag/" },
+
+    { "venue": "2121", "title": "ザ・ペーパーログ：膜と核", "start": "2026-08-13", "end": "2026-09-13", "category": "小企画", "url": "https://www.2121designsight.jp/gallery3/the_paper_log/" },
+    { "venue": "2121", "title": "方丈記に学ぶ —生きるを編み直す小さな建築—", "start": "2026-08-28", "end": "2027-01-11", "category": "企画展", "url": "https://www.2121designsight.jp/program/hojoki/" },
+    { "venue": "2121", "title": "Mechanical Wonders 2026", "start": "2026-09-19", "end": "2026-09-24", "category": "小企画", "url": "https://www.2121designsight.jp/gallery3/mechanical_wonders_2026/" },
+    { "venue": "2121", "title": "時間展", "start": "2027-01-29", "end": "2027-05-23", "category": "企画展", "url": "https://www.2121designsight.jp/program/time/" },
+
+    { "venue": "mot", "title": "多田美波―光、凛と ゆれる", "start": "2026-08-29", "end": "2026-12-06", "category": "企画展", "url": "https://www.mot-art-museum.jp/exhibitions/" },
+    { "venue": "mot", "title": "共時的星叢 ―時を共にした星たち 越境する芸術のまなざし", "start": "2026-09-05", "end": "2026-12-13", "category": "企画展", "url": "https://www.mot-art-museum.jp/exhibitions/" },
+
+    { "venue": "tnm", "title": "歌川広重 江戸のベストアングル", "start": "2026-09-29", "end": "2026-12-20", "category": "特別展", "url": "https://www.tnm.jp/" },
+
+    { "venue": "mimt", "title": "\"カフェ\"に集う芸術家 ―印象派からゴッホ、ロートレック、ピカソまで", "start": "2026-06-13", "end": "2026-09-23", "category": "企画展", "url": "https://mimt.jp/" },
+
+    { "venue": "artizon", "title": "エットレ・ソットサス —魔法がはじまるとき、デザインは生まれる", "start": "2026-06-23", "end": "2026-10-04", "category": "企画展", "url": "https://www.artizon.museum/" },
+    { "venue": "artizon", "title": "ジャム・セッション 石橋財団コレクション×藤井光 Whose Light? —だれのひかりか", "start": "2026-10-24", "end": "2027-01-31", "category": "企画展", "url": "https://www.artizon.museum/" },
+
+    { "venue": "teien", "title": "ルーシー・リー展 ―東西をつなぐ優美のうつわ―", "start": "2026-07-04", "end": "2026-09-13", "category": "企画展", "url": "https://www.teien-art-museum.ne.jp/" },
+    { "venue": "teien", "title": "マリメッコ展", "start": "2026-10-03", "end": "2026-12-20", "category": "企画展", "url": "https://www.teien-art-museum.ne.jp/" },
+
+    { "venue": "nezu", "title": "やきもの名品紀行 ―中国・日本・朝鮮半島―", "start": "2026-08-15", "end": "2026-10-12", "category": "企画展", "url": "https://www.nezu-muse.or.jp/" },
+
+    { "venue": "sompo", "title": "開館50周年記念 アルベール・マルケ展", "start": "2026-09-22", "end": "2026-12-13", "category": "企画展", "url": "https://www.sompo-museum.org/" },
+
+    { "venue": "ueno-mori", "title": "シンシナティ美術館展 ～アメリカに渡ったヨーロッパの至宝～", "start": "2026-10-10", "end": "2027-01-10", "category": "特別展", "url": "https://www.ueno-mori.org/" },
+
+    { "venue": "shiodome", "title": "吉田璋也のデザイン ― 新作民藝運動がめざした未来", "start": "2026-10-15", "end": "2026-12-20", "category": "企画展", "url": "https://panasonic.co.jp/ew/museum/" },
+
+    { "venue": "tsg", "title": "ニコライ・アストルップ", "start": "2026-11-21", "end": "2027-01-31", "category": "企画展", "url": "https://www.ejrcf.or.jp/gallery/" },
+
+    { "venue": "edohaku", "title": "円山応挙 リアルの先へ 空間革命", "start": "2026-11-28", "end": "2027-01-24", "category": "特別展", "url": "https://www.edo-tokyo-museum.or.jp/" },
+
+    { "venue": "geidai", "title": "藝大式 美術の\"ミカタ\" ―この夏、藝大生になる―", "start": "2026-07-24", "end": "2026-09-23", "category": "企画展", "url": "https://museum.geidai.ac.jp/" },
+
+    { "venue": "mmat", "title": "コレクション展『東京パック』とその時代 ＋ 特集展示 北澤楽天の『子供之友』", "start": "2026-10-10", "end": "2026-11-15", "category": "コレクション展", "url": "https://mmat.jp/" },
+
+    { "venue": "yayoi", "title": "石原豪人展 Around the 1970sの妄想画、大集合", "start": "2026-10-03", "end": "2026-12-20", "category": "企画展", "url": "https://www.yayoi-yumeji-museum.jp/" },
+
+    { "venue": "kemco", "title": "津田道子 からだの天気", "start": "2026-10-28", "end": "2026-12-24", "category": "企画展", "url": "https://kemco.keio.ac.jp/" },
+
+    { "venue": "icc", "title": "ICC アニュアル 2026 遺す／残る／受けとめる", "start": "2026-06-20", "end": "2026-11-08", "category": "企画展", "url": "https://www.ntticc.or.jp/" }
+  ]
+}

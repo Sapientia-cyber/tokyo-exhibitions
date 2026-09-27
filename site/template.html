@@ -1,0 +1,665 @@
+<title>東京美術館 会期表</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#FCFBF8;
+  --surface:#FFFFFF;
+  --surface-sunk:#F4F2EC;
+  --ink:#1A1C1E;
+  --ink-2:#4A4F55;
+  --ink-3:#797F86;
+  --rule:#E3E0D8;
+  --rule-strong:#CFCBC0;
+  --accent:#2F6DA8;
+  --accent-soft:#E7EFF7;
+  --today:#B93A55;
+  --c-tokubetsu:#B93A55;
+  --c-kikaku:#2F6DA8;
+  --c-collection:#B8791A;
+  --c-shou:#0D8A72;
+  --shadow:0 1px 2px rgba(26,28,30,.06),0 8px 24px -12px rgba(26,28,30,.18);
+  --radius:4px;
+  --font-body:"Noto Sans JP",-apple-system,"Hiragino Sans","Yu Gothic UI",Meiryo,sans-serif;
+  --font-display:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#16181A;
+    --surface:#1E2124;
+    --surface-sunk:#121416;
+    --ink:#E9E7E1;
+    --ink-2:#B4B8BD;
+    --ink-3:#868C93;
+    --rule:#2E3236;
+    --rule-strong:#454A4F;
+    --accent:#6AA3DC;
+    --accent-soft:#1E2A36;
+    --today:#D9536E;
+    --c-tokubetsu:#D9536E;
+    --c-kikaku:#4A8FD4;
+    --c-collection:#BE8524;
+    --c-shou:#1FA98B;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#16181A;
+  --surface:#1E2124;
+  --surface-sunk:#121416;
+  --ink:#E9E7E1;
+  --ink-2:#B4B8BD;
+  --ink-3:#868C93;
+  --rule:#2E3236;
+  --rule-strong:#454A4F;
+  --accent:#6AA3DC;
+  --accent-soft:#1E2A36;
+  --today:#D9536E;
+  --c-tokubetsu:#D9536E;
+  --c-kikaku:#4A8FD4;
+  --c-collection:#BE8524;
+  --c-shou:#1FA98B;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:14px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1400px;margin:0 auto;padding-inline:20px;padding-block:28px 56px}
+
+/* ---------- header ---------- */
+.masthead{display:flex;flex-wrap:wrap;align-items:flex-end;gap:16px 24px;padding-bottom:16px;border-bottom:2px solid var(--ink)}
+.masthead h1{
+  font-family:var(--font-display);font-weight:600;font-size:clamp(24px,3.4vw,34px);
+  margin:0;letter-spacing:.04em;text-wrap:balance;line-height:1.2;
+}
+.masthead .sub{color:var(--ink-2);font-size:13px;margin:4px 0 0}
+.meta{margin-left:auto;display:flex;gap:20px;flex-wrap:wrap}
+.meta div{text-align:right}
+.meta .k{font-size:10px;letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase}
+.meta .v{font-family:var(--font-mono);font-size:17px;font-variant-numeric:tabular-nums;color:var(--ink)}
+
+/* ---------- controls ---------- */
+.controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;padding:14px 0;border-bottom:1px solid var(--rule)}
+.group{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.group>.lbl{font-size:10px;letter-spacing:.12em;color:var(--ink-3);margin-right:2px}
+.chip{
+  font:inherit;font-size:12px;line-height:1;padding:6px 10px;border-radius:999px;cursor:pointer;
+  background:transparent;color:var(--ink-2);border:1px solid var(--rule-strong);
+  display:inline-flex;align-items:center;gap:6px;transition:background .12s,color .12s,border-color .12s;
+}
+.chip:hover{border-color:var(--ink-3);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chip .swatch{width:9px;height:9px;border-radius:2px;flex:none}
+.chip[aria-pressed="true"] .swatch{box-shadow:0 0 0 1.5px var(--paper)}
+.seg{display:inline-flex;border:1px solid var(--rule-strong);border-radius:var(--radius);overflow:hidden}
+.seg button{font:inherit;font-size:12px;padding:6px 14px;border:0;background:transparent;color:var(--ink-2);cursor:pointer}
+.seg button+button{border-left:1px solid var(--rule-strong)}
+.seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+input[type="search"]{
+  font:inherit;font-size:13px;padding:6px 10px;border:1px solid var(--rule-strong);border-radius:var(--radius);
+  background:var(--surface);color:var(--ink);min-width:170px;
+}
+input[type="search"]:focus-visible,.chip:focus-visible,.seg button:focus-visible,button:focus-visible,a:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px
+}
+.spacer{flex:1 1 40px}
+.linkbtn{font:inherit;font-size:12px;background:none;border:0;color:var(--accent);cursor:pointer;padding:6px 2px;text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- gantt ---------- */
+.board{margin-top:22px;border:1px solid var(--rule);border-radius:6px;background:var(--surface);box-shadow:var(--shadow);overflow:hidden}
+.scroller{overflow-x:auto;overflow-y:visible}
+.grid{position:relative;min-width:max-content}
+
+.axis{position:sticky;top:0;z-index:5;display:flex;background:var(--surface);border-bottom:1px solid var(--rule-strong)}
+.axis .corner{position:sticky;left:0;z-index:6;flex:none;background:var(--surface);border-right:1px solid var(--rule-strong);
+  font-size:10px;letter-spacing:.12em;color:var(--ink-3);display:flex;align-items:flex-end;padding:0 10px 6px}
+.months{display:flex;position:relative}
+.mo{flex:none;border-left:1px solid var(--rule);padding:8px 8px 6px;font-size:11px;color:var(--ink-2)}
+.mo.y-start{border-left:1px solid var(--rule-strong)}
+.mo b{font-family:var(--font-mono);font-weight:500;font-size:13px;color:var(--ink);font-variant-numeric:tabular-nums}
+.mo span{display:block;font-size:9px;letter-spacing:.1em;color:var(--ink-3)}
+
+.rows{position:relative}
+.vgroup{display:flex;border-top:1px solid var(--rule)}
+.vgroup:first-child{border-top:0}
+.vname{
+  position:sticky;left:0;z-index:3;flex:none;background:var(--surface);
+  border-right:1px solid var(--rule-strong);padding:8px 10px;display:flex;flex-direction:column;gap:1px;justify-content:center;
+}
+.vname b{font-weight:500;font-size:12.5px;line-height:1.35;color:var(--ink)}
+.vname span{font-size:10px;color:var(--ink-3);letter-spacing:.02em}
+.lanes{position:relative;flex:1}
+.lane{position:relative;height:30px}
+.lane+.lane{border-top:1px dotted var(--rule)}
+
+.gridlines{position:absolute;inset:0;pointer-events:none;z-index:0}
+.gridlines i{position:absolute;top:0;bottom:0;width:1px;background:var(--rule)}
+.gridlines i.y-start{background:var(--rule-strong)}
+.nowline{position:absolute;top:0;bottom:0;width:2px;background:var(--today);z-index:4;pointer-events:none}
+.nowflag{position:absolute;top:30px;transform:translateX(-50%);background:var(--today);color:#fff;font-size:9px;
+  letter-spacing:.1em;padding:2px 6px;border-radius:3px;z-index:7;pointer-events:none;white-space:nowrap}
+
+.bar{
+  position:absolute;top:4px;height:22px;border-radius:var(--radius);border:0;padding:0 8px;
+  display:flex;align-items:center;cursor:pointer;color:#fff;font:inherit;font-size:11.5px;
+  white-space:nowrap;overflow:hidden;text-align:left;z-index:2;
+  box-shadow:0 0 0 2px var(--surface);
+}
+.bar:hover,.bar.sel{filter:brightness(1.08);z-index:3}
+.bar .t{overflow:hidden;text-overflow:ellipsis}
+.bar .star{margin-right:5px;flex:none;opacity:.95}
+.bar.ending::after{
+  content:"";position:absolute;right:0;top:0;bottom:0;width:14px;
+  background:repeating-linear-gradient(135deg,rgba(255,255,255,.55) 0 2px,transparent 2px 5px);
+}
+.bar.clipL{border-top-left-radius:0;border-bottom-left-radius:0}
+.bar.clipR{border-top-right-radius:0;border-bottom-right-radius:0}
+.bar.past{opacity:.42}
+.outlabel{
+  position:absolute;top:4px;height:22px;display:flex;align-items:center;z-index:2;
+  background:none;border:0;padding:0;cursor:pointer;font:inherit;font-size:11.5px;color:var(--ink-2);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:left;
+}
+.outlabel.end{justify-content:flex-end;text-align:right}
+.outlabel:hover{color:var(--ink);text-decoration:underline;text-underline-offset:2px}
+.b-tokubetsu{background:var(--c-tokubetsu)}
+.b-kikaku{background:var(--c-kikaku)}
+.b-collection{background:var(--c-collection)}
+.b-shou{background:var(--c-shou)}
+
+/* ---------- table ---------- */
+.tablewrap{margin-top:22px;border:1px solid var(--rule);border-radius:6px;background:var(--surface);box-shadow:var(--shadow);overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:840px;font-size:13px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{
+  position:sticky;top:0;background:var(--surface);z-index:2;font-size:10px;letter-spacing:.12em;
+  color:var(--ink-3);font-weight:500;border-bottom:1px solid var(--rule-strong);white-space:nowrap;cursor:pointer;user-select:none
+}
+thead th .arw{opacity:.45;font-size:9px}
+tbody tr:hover{background:var(--surface-sunk)}
+td.tt{max-width:400px}
+td.tt a{color:var(--ink);text-decoration:none;font-weight:500}
+td.tt a:hover{text-decoration:underline;text-underline-offset:2px}
+td.dt{font-family:var(--font-mono);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink-2);font-size:12px}
+td.vn{color:var(--ink-2);white-space:nowrap}
+.tag{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--ink-2);white-space:nowrap}
+.tag i{width:9px;height:9px;border-radius:2px;flex:none}
+.left{font-family:var(--font-mono);font-variant-numeric:tabular-nums;white-space:nowrap;font-size:12px}
+.left.warn{color:var(--today);font-weight:500}
+.left.soon{color:var(--ink-3)}
+.starbtn{background:none;border:0;cursor:pointer;font-size:15px;line-height:1;padding:2px;color:var(--ink-3)}
+.starbtn[aria-pressed="true"]{color:var(--c-collection)}
+
+/* ---------- detail popover ---------- */
+.pop{
+  position:fixed;z-index:50;max-width:340px;background:var(--surface);border:1px solid var(--rule-strong);
+  border-radius:6px;box-shadow:var(--shadow);padding:14px 16px;
+}
+.pop h3{margin:0 0 6px;font-size:14px;font-weight:700;line-height:1.45;text-wrap:balance}
+.pop .row{display:flex;gap:8px;font-size:12px;color:var(--ink-2);margin-top:3px}
+.pop .row b{font-weight:500;color:var(--ink-3);min-width:3.6em;font-size:11px}
+.pop .acts{display:flex;gap:12px;margin-top:12px;padding-top:10px;border-top:1px solid var(--rule)}
+.pop a{color:var(--accent);font-size:12px}
+
+.empty{padding:52px 20px;text-align:center;color:var(--ink-3);font-size:13px}
+.foot{margin-top:26px;padding-top:14px;border-top:1px solid var(--rule);font-size:11.5px;color:var(--ink-3);line-height:1.8}
+.foot code{font-family:var(--font-mono);font-size:11px;background:var(--surface-sunk);padding:1px 5px;border-radius:3px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--paper);
+  padding:9px 18px;border-radius:999px;font-size:12.5px;z-index:60;box-shadow:var(--shadow)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (max-width:640px){
+  .wrap{padding-inline:16px}
+  .meta{margin-left:0;width:100%;gap:16px}
+  .meta div{text-align:left}
+}
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <div>
+      <h1>東京美術館 会期表</h1>
+      <p class="sub">主要27館の企画展・特別展を、会期の帯で重ねて見る</p>
+    </div>
+    <div class="meta">
+      <div><div class="k">開催中</div><div class="v" id="m-now">–</div></div>
+      <div><div class="k">今月終了</div><div class="v" id="m-end">–</div></div>
+      <div><div class="k">収録件数</div><div class="v" id="m-all">–</div></div>
+      <div><div class="k">データ更新</div><div class="v" id="m-upd">–</div></div>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="seg" role="group" aria-label="表示切替">
+      <button id="v-gantt" aria-pressed="true">ガント</button>
+      <button id="v-table" aria-pressed="false">一覧表</button>
+    </div>
+
+    <div class="group" id="f-cat" aria-label="種別で絞り込む"><span class="lbl">種別</span></div>
+
+    <div class="group" id="f-area" aria-label="エリアで絞り込む"><span class="lbl">エリア</span></div>
+
+    <div class="group">
+      <span class="lbl">期間</span>
+      <div class="seg" role="group" aria-label="表示期間">
+        <button data-span="3" aria-pressed="false">3ヶ月</button>
+        <button data-span="6" aria-pressed="true">6ヶ月</button>
+        <button data-span="12" aria-pressed="false">12ヶ月</button>
+        <button data-span="0" aria-pressed="false">全期間</button>
+      </div>
+    </div>
+
+    <div class="group">
+      <input type="search" id="q" placeholder="展覧会名・会場を検索" aria-label="検索">
+      <button class="chip" id="f-star" aria-pressed="false">★ 気になるのみ</button>
+      <button class="chip" id="f-ended" aria-pressed="false">終了分も表示</button>
+    </div>
+
+    <div class="spacer"></div>
+    <button class="linkbtn" id="dl-ics" hidden>カレンダーに書き出す（.ics）</button>
+  </div>
+
+  <div id="view-gantt" class="board">
+    <div class="scroller" id="scroller">
+      <div class="grid" id="grid"></div>
+    </div>
+  </div>
+
+  <div id="view-table" class="tablewrap" hidden>
+    <table>
+      <thead><tr>
+        <th style="width:34px" aria-label="気になる"></th>
+        <th data-sort="title">展覧会名 <span class="arw"></span></th>
+        <th data-sort="venue">会場 <span class="arw"></span></th>
+        <th data-sort="area">エリア <span class="arw"></span></th>
+        <th data-sort="cat">種別 <span class="arw"></span></th>
+        <th data-sort="start">会期 <span class="arw">▲</span></th>
+        <th data-sort="left">残り <span class="arw"></span></th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <p class="foot">
+    会期は各館公式サイトおよび美術館情報サイトを <span id="f-date">—</span> 時点で収集したもの。休館日・会期変更・展示替えは反映されないため、来館前に公式ページで確認してください。<br>
+    データは <code>exhibitions.json</code> を差し替えて更新します（収集スクリプト <code>fetch_exhibitions.py</code> 同梱）。
+  </p>
+</div>
+
+<script id="dataset" type="application/json">__DATA__</script>
+<script>
+(function(){
+"use strict";
+const DATA = JSON.parse(document.getElementById("dataset").textContent);
+const VENUES = new Map(DATA.venues.map(v=>[v.id,v]));
+const TODAY = new Date(DATA.generatedAt+"T00:00:00");
+const MS = 86400000;
+
+const CATS = [
+  {key:"特別展",     cls:"b-tokubetsu", varname:"--c-tokubetsu", match:["特別展"]},
+  {key:"企画展",     cls:"b-kikaku",    varname:"--c-kikaku",    match:["企画展"]},
+  {key:"コレクション展",cls:"b-collection",varname:"--c-collection",match:["コレクション展"]},
+  {key:"小企画・特集", cls:"b-shou",      varname:"--c-shou",      match:["小企画","特集展示","小企画展"]}
+];
+function catOf(raw){
+  for(const c of CATS){ if(c.match.includes(raw)) return c; }
+  return CATS[3];
+}
+
+const ITEMS = DATA.exhibitions.map((e,i)=>{
+  const v = VENUES.get(e.venue) || {name:e.venue, area:"", station:"", url:"#"};
+  const s = new Date(e.start+"T00:00:00"), t = new Date(e.end+"T00:00:00");
+  const c = catOf(e.category);
+  return {
+    id:"e"+i, title:e.title, raw:e.category, cat:c.key, cls:c.cls,
+    venue:v.name, venueShort:v.short||v.name, area:v.area, station:v.station,
+    url:e.url||v.url, start:s, end:t, startS:e.start, endS:e.end,
+    days:Math.round((t-s)/MS)+1,
+    left:Math.round((t-TODAY)/MS),
+    ended:t<TODAY, future:s>TODAY
+  };
+});
+
+const AREAS = [...new Set(ITEMS.map(i=>i.area))].filter(Boolean)
+  .sort((a,b)=>ITEMS.filter(i=>i.area===b).length-ITEMS.filter(i=>i.area===a).length);
+
+const state = {
+  view:"gantt", span:6, q:"",
+  cats:new Set(CATS.map(c=>c.key)),
+  areas:new Set(AREAS),
+  starOnly:false, showEnded:false,
+  sort:{key:"start",dir:1},
+  stars:new Set()
+};
+
+/* ---------- persistence: db capability, localStorage fallback ---------- */
+let dbDoc=null;
+function loadLocal(){
+  try{ const r=localStorage.getItem("kaiki-stars"); if(r) JSON.parse(r).forEach(x=>state.stars.add(x)); }catch(e){}
+}
+function saveStars(){
+  try{ localStorage.setItem("kaiki-stars",JSON.stringify([...state.stars])); }catch(e){}
+  if(dbDoc){ dbDoc.set({ids:[...state.stars],updatedAt:new Date().toISOString()}).catch(()=>{}); }
+}
+loadLocal();
+(async function(){
+  try{
+    const db = await window.claude?.use?.("db");
+    if(!db) return;
+    dbDoc = db.doc("state/watchlist");
+    const snap = await dbDoc.get();
+    if(snap && snap.exists && Array.isArray(snap.data?.ids)){
+      state.stars = new Set(snap.data.ids);
+      try{ localStorage.setItem("kaiki-stars",JSON.stringify([...state.stars])); }catch(e){}
+      render();
+    }
+    dbDoc.onSnapshot(s=>{
+      if(s.exists && Array.isArray(s.data?.ids)){
+        const next=new Set(s.data.ids);
+        if(next.size!==state.stars.size||[...next].some(x=>!state.stars.has(x))){ state.stars=next; render(); }
+      }
+    },()=>{});
+  }catch(e){}
+})();
+
+let dl=null;
+(async function(){
+  try{
+    dl = await window.claude?.use?.("downloads");
+    if(dl) document.getElementById("dl-ics").hidden=false;
+  }catch(e){}
+})();
+
+/* ---------- filtering ---------- */
+function visible(){
+  const q=state.q.trim().toLowerCase();
+  return ITEMS.filter(i=>{
+    if(!state.cats.has(i.cat)) return false;
+    if(!state.areas.has(i.area)) return false;
+    if(state.starOnly && !state.stars.has(i.id)) return false;
+    if(!state.showEnded && i.ended) return false;
+    if(q && !(i.title.toLowerCase().includes(q)||i.venue.toLowerCase().includes(q)||i.station.toLowerCase().includes(q))) return false;
+    return true;
+  });
+}
+function window_(){
+  const from = new Date(TODAY); from.setDate(1);
+  if(state.showEnded) from.setMonth(from.getMonth()-2);
+  let to;
+  if(state.span===0){
+    const max = ITEMS.reduce((m,i)=>i.end>m?i.end:m, TODAY);
+    to = new Date(max.getFullYear(),max.getMonth()+1,1);
+  }else{
+    to = new Date(from.getFullYear(),from.getMonth()+state.span,1);
+  }
+  return {from,to};
+}
+
+/* ---------- gantt ---------- */
+const VCOL = 154;
+function renderGantt(items){
+  const grid=document.getElementById("grid");
+  const {from,to}=window_();
+  const months=[];
+  for(let d=new Date(from); d<to; d.setMonth(d.getMonth()+1)) months.push(new Date(d));
+  const totalDays=Math.round((to-from)/MS);
+  const avail=(document.getElementById("scroller").clientWidth||1100)-VCOL-2;
+  const MO_W=Math.max(112, Math.floor(avail/months.length));
+  const laneW=months.length*MO_W;
+  const px = d => (d-from)/MS/totalDays*laneW;
+
+  const inWin = items.filter(i=>i.end>=from && i.start<to);
+  if(!inWin.length){
+    grid.innerHTML='<div class="empty">条件に合う展覧会がありません。フィルタを緩めてみてください。</div>';
+    return;
+  }
+  const byVenue=new Map();
+  inWin.forEach(i=>{ if(!byVenue.has(i.venue)) byVenue.set(i.venue,[]); byVenue.get(i.venue).push(i); });
+  const venues=[...byVenue.entries()].sort((a,b)=>{
+    const ea=Math.min(...a[1].map(x=>+x.start)), eb=Math.min(...b[1].map(x=>+x.start));
+    return ea-eb || a[0].localeCompare(b[0],"ja");
+  });
+
+  const nowX = (TODAY>=from && TODAY<to) ? px(TODAY) : null;
+  const lines = months.map((m,k)=>`<i class="${m.getMonth()===0?"y-start":""}" style="left:${k*MO_W}px"></i>`).join("");
+
+  let html = `<div class="axis">
+    <div class="corner" style="width:${VCOL}px">会場 / 会期</div>
+    <div class="months">${months.map(m=>
+      `<div class="mo ${m.getMonth()===0?"y-start":""}" style="width:${MO_W}px">
+         <b>${m.getMonth()+1}月</b><span>${m.getFullYear()}</span></div>`).join("")}</div>
+  </div>`;
+  if(nowX!==null) html += `<div class="nowflag" style="left:${VCOL+nowX}px">今日</div>`;
+
+  html += `<div class="rows">`;
+  for(const [vname,list] of venues){
+    list.sort((a,b)=>a.start-b.start || a.title.localeCompare(b.title,"ja"));
+    const v = DATA.venues.find(x=>x.name===vname)||{};
+    const lanes = packLanes(list);
+    html += `<div class="vgroup">
+      <div class="vname" style="width:${VCOL}px"><b>${esc(vname)}</b><span>${esc(v.area||"")}・${esc(v.station||"")}</span></div>
+      <div class="lanes" style="width:${laneW}px">
+        <div class="gridlines">${lines}</div>
+        ${nowX!==null?`<div class="nowline" style="left:${nowX}px"></div>`:""}
+        ${lanes.map(lane=>`<div class="lane">${lane.map(i=>barHtml(i,from,to,px,laneW)).join("")}</div>`).join("")}
+      </div></div>`;
+  }
+  html += `</div>`;
+  grid.innerHTML=html;
+}
+function packLanes(list){
+  const lanes=[];
+  for(const i of list){
+    let placed=false;
+    for(const lane of lanes){
+      const last=lane[lane.length-1];
+      if(i.start - last.end > 3*MS){ lane.push(i); placed=true; break; }
+    }
+    if(!placed) lanes.push([i]);
+  }
+  return lanes;
+}
+function barHtml(i,from,to,px,laneW){
+  const clipL = i.start<from, clipR = i.end>=to;
+  const x = Math.max(0, px(i.start));
+  const x2 = Math.min(laneW, px(new Date(+i.end+MS)));
+  const w = Math.max(14, x2-x);
+  const ending = !i.ended && i.left<=14 && i.left>=0;
+  const narrow = w < 78;
+  const cls=[ "bar", i.cls, clipL?"clipL":"", clipR?"clipR":"", ending?"ending":"", i.ended?"past":"", narrow?"narrow":"" ].filter(Boolean).join(" ");
+  const star = state.stars.has(i.id) ? '<span class="star">★</span>' : '';
+  const tip = `title="${esc(i.title)}｜${i.startS}〜${i.endS}"`;
+  const bar = `<button class="${cls}" style="left:${x}px;width:${w}px" data-id="${i.id}" ${tip}>${narrow?"":star+'<span class="t">'+esc(i.title)+'</span>'}</button>`;
+  if(!narrow) return bar;
+  const room = laneW - (x+w) - 8;
+  const side = room > 90
+    ? `<button class="outlabel" style="left:${x+w+6}px;max-width:${Math.min(room,300)}px" data-id="${i.id}" ${tip}>${star}${esc(i.title)}</button>`
+    : `<button class="outlabel end" style="right:${Math.max(0,laneW-x)+6}px;max-width:${Math.min(x-6,300)}px" data-id="${i.id}" ${tip}>${star}${esc(i.title)}</button>`;
+  return bar + side;
+}
+
+/* ---------- table ---------- */
+function renderTable(items){
+  const tb=document.getElementById("tbody");
+  const {key,dir}=state.sort;
+  const get={
+    title:i=>i.title, venue:i=>i.venue, area:i=>i.area, cat:i=>i.cat,
+    start:i=>i.startS, left:i=>i.ended?99999:i.left
+  }[key];
+  const rows=[...items].sort((a,b)=>{
+    const A=get(a),B=get(b);
+    if(typeof A==="number") return (A-B)*dir;
+    return String(A).localeCompare(String(B),"ja")*dir;
+  });
+  if(!rows.length){ tb.innerHTML='<tr><td colspan="7"><div class="empty">条件に合う展覧会がありません。</div></td></tr>'; return; }
+  tb.innerHTML = rows.map(i=>{
+    const c=CATS.find(c=>c.key===i.cat);
+    let leftTxt,leftCls;
+    if(i.ended){ leftTxt="終了"; leftCls="soon"; }
+    else if(i.future){ leftTxt=`${Math.round((i.start-TODAY)/MS)}日後 開幕`; leftCls="soon"; }
+    else if(i.left<=14){ leftTxt=`あと${i.left}日`; leftCls="warn"; }
+    else { leftTxt=`あと${i.left}日`; leftCls=""; }
+    return `<tr>
+      <td><button class="starbtn" data-star="${i.id}" aria-pressed="${state.stars.has(i.id)}" aria-label="気になるに追加">${state.stars.has(i.id)?"★":"☆"}</button></td>
+      <td class="tt"><a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.title)}</a></td>
+      <td class="vn">${esc(i.venue)}</td>
+      <td class="vn">${esc(i.area)}</td>
+      <td><span class="tag"><i style="background:var(${c.varname})"></i>${esc(i.raw)}</span></td>
+      <td class="dt">${fmt(i.start)} – ${fmt(i.end)}<br><span style="color:var(--ink-3)">${i.days}日間</span></td>
+      <td class="left ${leftCls}">${leftTxt}</td>
+    </tr>`;
+  }).join("");
+}
+function fmt(d){ return `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,"0")}.${String(d.getDate()).padStart(2,"0")}`; }
+function esc(s){ return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+/* ---------- chrome ---------- */
+function renderMeta(){
+  const now=ITEMS.filter(i=>!i.ended && !i.future).length;
+  const eom=new Date(TODAY.getFullYear(),TODAY.getMonth()+1,0);
+  const end=ITEMS.filter(i=>!i.ended && i.end<=eom).length;
+  document.getElementById("m-now").textContent=now;
+  document.getElementById("m-end").textContent=end;
+  document.getElementById("m-all").textContent=ITEMS.length;
+  document.getElementById("m-upd").textContent=DATA.generatedAt.replace(/-/g,".").slice(5);
+  document.getElementById("f-date").textContent=DATA.generatedAt.replace(/-/g,"年").replace(/年(\d+)$/,"月$1日").replace(/^(\d+)年/,"$1年");
+}
+function buildChips(){
+  const fc=document.getElementById("f-cat");
+  CATS.forEach(c=>{
+    const b=document.createElement("button");
+    b.className="chip"; b.setAttribute("aria-pressed","true"); b.dataset.cat=c.key;
+    b.innerHTML=`<span class="swatch" style="background:var(${c.varname})"></span>${c.key}`;
+    b.onclick=()=>{ toggle(state.cats,c.key); b.setAttribute("aria-pressed",state.cats.has(c.key)); render(); };
+    fc.appendChild(b);
+  });
+  const fa=document.getElementById("f-area");
+  AREAS.forEach(a=>{
+    const b=document.createElement("button");
+    b.className="chip"; b.setAttribute("aria-pressed","true"); b.dataset.area=a;
+    b.textContent=a;
+    b.onclick=()=>{ toggle(state.areas,a); b.setAttribute("aria-pressed",state.areas.has(a)); render(); };
+    fa.appendChild(b);
+  });
+}
+function toggle(set,v){ set.has(v)?set.delete(v):set.add(v); if(!set.size){ /* never empty */ set.add(v); } }
+
+function render(){
+  const items=visible();
+  if(state.view==="gantt") renderGantt(items); else renderTable(items);
+}
+
+/* events */
+document.getElementById("v-gantt").onclick=()=>setView("gantt");
+document.getElementById("v-table").onclick=()=>setView("table");
+function setView(v){
+  state.view=v;
+  document.getElementById("v-gantt").setAttribute("aria-pressed",v==="gantt");
+  document.getElementById("v-table").setAttribute("aria-pressed",v==="table");
+  document.getElementById("view-gantt").hidden = v!=="gantt";
+  document.getElementById("view-table").hidden = v!=="table";
+  render();
+}
+document.querySelectorAll("[data-span]").forEach(b=>{
+  b.onclick=()=>{
+    state.span=+b.dataset.span;
+    document.querySelectorAll("[data-span]").forEach(x=>x.setAttribute("aria-pressed",x===b));
+    render();
+  };
+});
+document.getElementById("q").oninput=e=>{ state.q=e.target.value; render(); };
+document.getElementById("f-star").onclick=e=>{ state.starOnly=!state.starOnly; e.currentTarget.setAttribute("aria-pressed",state.starOnly); render(); };
+document.getElementById("f-ended").onclick=e=>{ state.showEnded=!state.showEnded; e.currentTarget.setAttribute("aria-pressed",state.showEnded); render(); };
+document.querySelectorAll("thead th[data-sort]").forEach(th=>{
+  th.onclick=()=>{
+    const k=th.dataset.sort;
+    state.sort = (state.sort.key===k) ? {key:k,dir:-state.sort.dir} : {key:k,dir:1};
+    document.querySelectorAll("thead th .arw").forEach(a=>a.textContent="");
+    th.querySelector(".arw").textContent = state.sort.dir>0?"▲":"▼";
+    render();
+  };
+});
+document.addEventListener("click",e=>{
+  const sb=e.target.closest("[data-star]");
+  if(sb){ const id=sb.dataset.star; state.stars.has(id)?state.stars.delete(id):state.stars.add(id); saveStars(); render(); return; }
+  const bar=e.target.closest(".bar,.outlabel");
+  if(bar){ openPop(bar); return; }
+  closePop();
+});
+
+/* detail popover */
+let pop=null;
+function closePop(){ if(pop){ pop.remove(); pop=null; } }
+function openPop(bar){
+  closePop();
+  const i=ITEMS.find(x=>x.id===bar.dataset.id); if(!i) return;
+  const starred=state.stars.has(i.id);
+  pop=document.createElement("div");
+  pop.className="pop";
+  pop.innerHTML=`<h3>${esc(i.title)}</h3>
+    <div class="row"><b>会場</b><span>${esc(i.venue)}（${esc(i.area)}・${esc(i.station)}）</span></div>
+    <div class="row"><b>会期</b><span>${fmt(i.start)} – ${fmt(i.end)}　<span style="color:var(--ink-3)">${i.days}日間</span></span></div>
+    <div class="row"><b>種別</b><span>${esc(i.raw)}</span></div>
+    <div class="row"><b>残り</b><span>${i.ended?"終了":(i.future?`${Math.round((i.start-TODAY)/MS)}日後に開幕`:`あと${i.left}日`)}</span></div>
+    <div class="acts">
+      <button class="linkbtn" data-star="${i.id}">${starred?"★ 気になるから外す":"☆ 気になるに追加"}</button>
+      <a href="${esc(i.url)}" target="_blank" rel="noopener">公式ページ ↗</a>
+    </div>`;
+  document.body.appendChild(pop);
+  const r=bar.getBoundingClientRect(), pr=pop.getBoundingClientRect();
+  let left=Math.min(Math.max(8,r.left), innerWidth-pr.width-8);
+  let top=r.bottom+8; if(top+pr.height>innerHeight-8) top=Math.max(8,r.top-pr.height-8);
+  pop.style.left=left+"px"; pop.style.top=top+"px";
+}
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") closePop(); });
+
+/* ICS export */
+document.getElementById("dl-ics").onclick=async()=>{
+  const items = state.stars.size ? ITEMS.filter(i=>state.stars.has(i.id)) : visible();
+  if(!items.length){ toast("書き出す展覧会がありません"); return; }
+  const pad=n=>String(n).padStart(2,"0");
+  const dstamp=d=>`${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}`;
+  const lines=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//kaikihyo//JP","CALSCALE:GREGORIAN"];
+  items.forEach((i,n)=>{
+    const endEx=new Date(+i.end+MS);
+    lines.push("BEGIN:VEVENT",
+      `UID:kaikihyo-${n}-${dstamp(i.start)}@artifact`,
+      `DTSTAMP:${dstamp(TODAY)}T000000Z`,
+      `DTSTART;VALUE=DATE:${dstamp(i.start)}`,
+      `DTEND;VALUE=DATE:${dstamp(endEx)}`,
+      `SUMMARY:${ics(i.title)}`,
+      `LOCATION:${ics(i.venue)}`,
+      `DESCRIPTION:${ics(i.raw+" / "+i.venue+" / "+(i.url||""))}`,
+      "END:VEVENT");
+  });
+  lines.push("END:VCALENDAR");
+  try{
+    await dl.save({filename:"tokyo-exhibitions.ics", data:lines.join("\r\n")});
+    toast(`${items.length}件を書き出しました`);
+  }catch(err){
+    if(err && err.code==="declined") return;
+    toast("書き出せませんでした");
+  }
+};
+function ics(s){ return String(s).replace(/([,;\\])/g,"\\$1").replace(/\n/g," "); }
+let tt=null;
+function toast(msg){
+  if(tt) tt.remove();
+  tt=document.createElement("div"); tt.className="toast"; tt.textContent=msg;
+  document.body.appendChild(tt); setTimeout(()=>{ if(tt){tt.remove();tt=null;} },2600);
+}
+
+buildChips(); renderMeta(); render();
+let rz=null;
+addEventListener("resize",()=>{ clearTimeout(rz); rz=setTimeout(()=>{ if(state.view==="gantt") render(); },180); });
+})();
+</script>
