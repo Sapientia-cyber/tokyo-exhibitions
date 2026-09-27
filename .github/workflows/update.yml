@@ -1,25 +1,14 @@
-name: 会期データ更新とデプロイ
+name: 会期データ更新
 
 on:
   schedule:
     - cron: "0 20 * * *"
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - "site/**"
-      - "scraper/**"
-      - ".github/workflows/update.yml"
+
 permissions:
   contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: false
 jobs:
-  build:
+  scrape:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -30,16 +19,15 @@ jobs:
           python-version-file: .python-version
           cache: pip
           cache-dependency-path: scraper/requirements.txt
+
       - name: 依存関係をインストール
         run: |
           pip install -r scraper/requirements.txt
           python -m playwright install --with-deps chromium
 
       - name: 会期データを収集
-        if: github.event_name != 'push'
         run: python scraper/fetch.py
       - name: 変更があればコミット
-        if: github.event_name != 'push'
         run: |
           if [[ -z "$(git status --porcelain data/)" ]]; then
             echo "変更なし"
@@ -50,12 +38,6 @@ jobs:
           git add data/
           git commit -m "会期データ更新 $(TZ=Asia/Tokyo date +%Y-%m-%d)"
           git push
-      - name: ページをビルド
-        run: python site/build.py
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
       - name: 収集結果のサマリ
         if: always()
         run: |
@@ -76,12 +58,3 @@ jobs:
           if missing:
               print(f"\n**0件だった館**: {', '.join(missing)}")
           PY
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
