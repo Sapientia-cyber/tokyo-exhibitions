@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27",
+  "generatedAt": "2026-09-28",
   "region": "東京",
   "venues": [
     {
@@ -507,14 +507,6 @@
       "end": "2026-12-13",
       "category": "企画展",
       "url": "https://www.sompo-museum.org/exhibitions/2025/albertmarquet/"
-    },
-    {
-      "venue": "geidai",
-      "title": "先端芸術表現 x GAP合同助教・助手展 日程",
-      "start": "2026-09-25",
-      "end": "2026-09-27",
-      "category": "企画展",
-      "url": "https://museum.geidai.ac.jp/exhibit/2026/09/sentan-gap2026.html"
     },
     {
       "venue": "momat",
