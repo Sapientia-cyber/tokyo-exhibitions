@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28",
+  "generatedAt": "2026-09-29",
   "region": "東京",
   "venues": [
     {
@@ -565,6 +565,14 @@
       "url": "https://museum.geidai.ac.jp/exhibit/2026/10/furukawakiyoshi.html"
     },
     {
+      "venue": "geidai",
+      "title": "予告 東京藝術大学と中国人留学生〜胡根天から現代まで〜展 日程",
+      "start": "2026-10-03",
+      "end": "2026-10-18",
+      "category": "企画展",
+      "url": "https://museum.geidai.ac.jp/exhibit/2026/11/chinese-students2026.html"
+    },
+    {
       "venue": "teien",
       "title": "マリメッコ展 模様のちから 開催予定",
       "start": "2026-10-03",
@@ -763,6 +771,14 @@
       "end": "2027-05-23",
       "category": "企画展",
       "url": "https://www.2121designsight.jp/program/time/"
+    },
+    {
+      "venue": "top",
+      "title": "恵比寿映像祭2027 3・2・B1F 展示室",
+      "start": "2027-02-05",
+      "end": "2027-02-21",
+      "category": "企画展",
+      "url": "https://topmuseum.jp/exhibition/5425/"
     },
     {
       "venue": "artizon",
