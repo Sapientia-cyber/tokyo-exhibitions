@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30",
+  "generatedAt": "2026-10-01",
   "region": "東京",
   "venues": [
     {
@@ -507,6 +507,14 @@
       "end": "2026-12-13",
       "category": "企画展",
       "url": "https://www.sompo-museum.org/exhibitions/2025/albertmarquet/"
+    },
+    {
+      "venue": "icc",
+      "title": "展示 ハイパーICC",
+      "start": "2026-09-29",
+      "end": "2026-11-08",
+      "category": "企画展",
+      "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/hyper-icc-annual-2026/"
     },
     {
       "venue": "momat",
