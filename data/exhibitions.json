@@ -341,14 +341,6 @@
       "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/icc-annual-2026/"
     },
     {
-      "venue": "artizon",
-      "title": "瀧口修造 書くことと描くこと",
-      "start": "2026-06-23",
-      "end": "2026-10-04",
-      "category": "企画展",
-      "url": "https://www.artizon.museum/exhibition/detail/604"
-    },
-    {
       "venue": "nmwa",
       "title": "【特集展示】「昭和100年」昭和時代 当館における保存修復の変遷",
       "start": "2026-06-30",
@@ -467,6 +459,14 @@
       "end": "2026-12-13",
       "category": "企画展",
       "url": "https://www.nact.jp/exhibition_special/2026/louvre2026/"
+    },
+    {
+      "venue": "icc",
+      "title": "アーティスト・トーク アーティスト・トーク 葉山嶺",
+      "start": "2026-09-12",
+      "end": "2026-11-08",
+      "category": "企画展",
+      "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/artists-talk-hayama-rei-oct-12-2026/"
     },
     {
       "venue": "icc",
