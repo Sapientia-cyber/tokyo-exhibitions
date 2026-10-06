@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04",
+  "generatedAt": "2026-10-06",
   "region": "東京",
   "venues": [
     {
@@ -573,14 +573,6 @@
       "url": "https://museum.geidai.ac.jp/exhibit/2026/10/furukawakiyoshi.html"
     },
     {
-      "venue": "geidai",
-      "title": "予告 東京藝術大学と中国人留学生〜胡根天から現代まで〜展 日程",
-      "start": "2026-10-03",
-      "end": "2026-10-18",
-      "category": "企画展",
-      "url": "https://museum.geidai.ac.jp/exhibit/2026/11/chinese-students2026.html"
-    },
-    {
       "venue": "teien",
       "title": "マリメッコ展 模様のちから 開催中",
       "start": "2026-10-03",
@@ -635,6 +627,14 @@
       "end": "2026-12-20",
       "category": "企画展",
       "url": "https://www.operacity.jp/ag/"
+    },
+    {
+      "venue": "geidai",
+      "title": "予告 東京藝術大学デザイン科×三和酒類株式会社 受託研究プロジェクト2026 iichiko PERSON AWARD 2026 EXHIBITION 日程",
+      "start": "2026-10-23",
+      "end": "2026-10-25",
+      "category": "企画展",
+      "url": "https://museum.geidai.ac.jp/exhibit/2026/10/design-sanwa.html"
     },
     {
       "venue": "momat",
@@ -775,7 +775,7 @@
     {
       "venue": "2121",
       "title": "[これからのプログラム] 時間展",
-      "start": "2027-01-29",
+      "start": "2027-02-05",
       "end": "2027-05-23",
       "category": "企画展",
       "url": "https://www.2121designsight.jp/program/time/"
