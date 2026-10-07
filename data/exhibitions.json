@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06",
+  "generatedAt": "2026-10-07",
   "region": "東京",
   "venues": [
     {
@@ -571,6 +571,14 @@
       "end": "2026-10-18",
       "category": "企画展",
       "url": "https://museum.geidai.ac.jp/exhibit/2026/10/furukawakiyoshi.html"
+    },
+    {
+      "venue": "geidai",
+      "title": "予告 東京藝術大学と中国人留学生〜胡根天から現代まで〜展 日程",
+      "start": "2026-10-03",
+      "end": "2026-10-18",
+      "category": "企画展",
+      "url": "https://museum.geidai.ac.jp/exhibit/2026/11/chinese-students2026.html"
     },
     {
       "venue": "teien",
