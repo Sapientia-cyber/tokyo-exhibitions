@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07",
+  "generatedAt": "2026-10-08",
   "region": "東京",
   "venues": [
     {
@@ -462,6 +462,22 @@
     },
     {
       "venue": "icc",
+      "title": "アーティスト・トーク アーティスト・トーク 小林椋",
+      "start": "2026-09-12",
+      "end": "2026-11-08",
+      "category": "企画展",
+      "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/artists-talk-kobayashi-muku-oct-24-2026/"
+    },
+    {
+      "venue": "icc",
+      "title": "アーティスト・トーク アーティスト・トーク 杉田碧（エマージェンシーズ！ 049 出品作家）",
+      "start": "2026-09-12",
+      "end": "2026-11-08",
+      "category": "企画展",
+      "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/artists-talk-sugita-aoi-oct-17-2026/"
+    },
+    {
+      "venue": "icc",
       "title": "アーティスト・トーク アーティスト・トーク 葉山嶺",
       "start": "2026-09-12",
       "end": "2026-11-08",
@@ -747,6 +763,14 @@
       "end": "2027-01-11",
       "category": "企画展",
       "url": "https://www.tobikan.jp/exhibition/2026_waysofreading.html"
+    },
+    {
+      "venue": "geidai",
+      "title": "予告 芸術未来研究場展2026 日程",
+      "start": "2026-11-20",
+      "end": "2026-12-02",
+      "category": "企画展",
+      "url": "https://museum.geidai.ac.jp/exhibit/2026/11/gmk2026.html"
     },
     {
       "venue": "tsg",
