@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08",
+  "generatedAt": "2026-10-09",
   "region": "東京",
   "venues": [
     {
@@ -230,11 +230,11 @@
   "exhibitions": [
     {
       "venue": "nmwa",
-      "title": "コレクション・イン・フォーカス",
+      "title": "常設展 特集展示 国立西洋美術館 ボランティア・スタッフの活動",
       "start": "2026-03-28",
-      "end": "2027-01-15",
-      "category": "コレクション展",
-      "url": "https://www.nmwa.go.jp/jp/exhibitions/2026CinF.html"
+      "end": "2027-01-11",
+      "category": "特集展示",
+      "url": "https://www.nmwa.go.jp/jp/exhibitions/2026volunteer.html"
     },
     {
       "venue": "geidai",
@@ -341,36 +341,12 @@
       "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/icc-annual-2026/"
     },
     {
-      "venue": "nmwa",
-      "title": "【特集展示】「昭和100年」昭和時代 当館における保存修復の変遷",
-      "start": "2026-06-30",
-      "end": "2027-01-11",
-      "category": "特集展示",
-      "url": "https://www.nmwa.go.jp/jp/exhibitions/2026showa100.html"
-    },
-    {
-      "venue": "nmwa",
-      "title": "神話、寓意、祝祭——ルネサンスからバロックにおけるイタリア宮廷と版画",
-      "start": "2026-06-30",
-      "end": "2026-10-12",
-      "category": "小企画展",
-      "url": "https://www.nmwa.go.jp/jp/exhibitions/2026italy.html"
-    },
-    {
       "venue": "shoto",
       "title": "没後50年 髙島野十郎展",
       "start": "2026-07-04",
       "end": "2026-09-06",
       "category": "企画展",
       "url": "https://shoto-museum.jp/exhibitions/212takashima/"
-    },
-    {
-      "venue": "nmwa",
-      "title": "版画家レンブラント 挑戦、継承、インパクト",
-      "start": "2026-07-07",
-      "end": "2026-09-23",
-      "category": "企画展",
-      "url": "https://www.nmwa.go.jp/jp/exhibitions/2026rembrandt.html"
     },
     {
       "venue": "operacity",
@@ -395,14 +371,6 @@
       "end": "2026-09-23",
       "category": "コレクション展",
       "url": "https://www.operacity.jp/ag/"
-    },
-    {
-      "venue": "nmwa",
-      "title": "【特集展示】クロード・モネ没後100周年",
-      "start": "2026-07-22",
-      "end": "2026-09-23",
-      "category": "特集展示",
-      "url": "https://www.nmwa.go.jp/jp/exhibitions/2026monet100.html"
     },
     {
       "venue": "tobikan",
@@ -667,14 +635,6 @@
       "end": "2027-01-11",
       "category": "企画展",
       "url": "https://www.momat.go.jp/exhibitions/570"
-    },
-    {
-      "venue": "nmwa",
-      "title": "テート美術館 ターナー展──崇高の絵画、現代美術との対話",
-      "start": "2026-10-24",
-      "end": "2027-02-21",
-      "category": "企画展",
-      "url": "https://www.nmwa.go.jp/jp/exhibitions/"
     },
     {
       "venue": "kemco",
