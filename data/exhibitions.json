@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15",
+  "generatedAt": "2026-10-16",
   "region": "東京",
   "venues": [
     {
@@ -349,30 +349,6 @@
       "url": "https://shoto-museum.jp/exhibitions/212takashima/"
     },
     {
-      "venue": "operacity",
-      "title": "project N 103 東山詩織",
-      "start": "2026-07-18",
-      "end": "2026-09-23",
-      "category": "小企画",
-      "url": "https://www.operacity.jp/ag/"
-    },
-    {
-      "venue": "operacity",
-      "title": "ほぼ空 青木淳 + リチャード・タトル",
-      "start": "2026-07-18",
-      "end": "2026-09-23",
-      "category": "企画展",
-      "url": "https://www.operacity.jp/ag/exh300/"
-    },
-    {
-      "venue": "operacity",
-      "title": "収蔵品展087 青木淳が選ぶコレクション（寺田コレクションより）",
-      "start": "2026-07-18",
-      "end": "2026-09-23",
-      "category": "コレクション展",
-      "url": "https://www.operacity.jp/ag/"
-    },
-    {
       "venue": "tobikan",
       "title": "開館100周年記念 この場所の風景―上野・大牟田・ブエノスアイレス",
       "start": "2026-07-23",
@@ -605,14 +581,6 @@
       "url": "https://panasonic.co.jp/ew/museum/"
     },
     {
-      "venue": "operacity",
-      "title": "種と根っこ―都市の耕し方",
-      "start": "2026-10-17",
-      "end": "2026-12-20",
-      "category": "企画展",
-      "url": "https://www.operacity.jp/ag/"
-    },
-    {
       "venue": "geidai",
       "title": "予告 東京藝術大学デザイン科×三和酒類株式会社 受託研究プロジェクト2026 iichiko PERSON AWARD 2026 EXHIBITION 日程",
       "start": "2026-10-23",
@@ -755,6 +723,14 @@
       "end": "2027-02-21",
       "category": "企画展",
       "url": "https://www.sompo-museum.org/exhibitions/2025/togoseiji-130th-anniversary/"
+    },
+    {
+      "venue": "operacity",
+      "title": "これからの展覧会",
+      "start": "2027-01-16",
+      "end": "2027-03-22",
+      "category": "コレクション展",
+      "url": "https://www.operacity.jp/ag/exh/upcoming_exhibitions/"
     },
     {
       "venue": "2121",
