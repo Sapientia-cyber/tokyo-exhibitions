@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17",
+  "generatedAt": "2026-10-18",
   "region": "東京",
   "venues": [
     {
@@ -387,14 +387,6 @@
       "end": "2026-12-13",
       "category": "企画展",
       "url": "https://www.mot-art-museum.jp/exhibitions/"
-    },
-    {
-      "venue": "top",
-      "title": "TOKYOスマート・カルチャー・プロジェクト 奈良女子大学 長谷研究室「複製される感性－森山大道」 B1F 展示室",
-      "start": "2026-09-05",
-      "end": "2026-10-18",
-      "category": "企画展",
-      "url": "https://topmuseum.jp/exhibition/12474/"
     },
     {
       "venue": "nact",
