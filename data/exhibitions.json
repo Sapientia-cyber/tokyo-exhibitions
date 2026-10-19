@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18",
+  "generatedAt": "2026-10-19",
   "region": "東京",
   "venues": [
     {
@@ -493,30 +493,6 @@
       "url": "https://topmuseum.jp/exhibition/5421/"
     },
     {
-      "venue": "geidai",
-      "title": "三上亮退任記念展 行為の無作為 日程",
-      "start": "2026-10-03",
-      "end": "2026-10-18",
-      "category": "企画展",
-      "url": "https://museum.geidai.ac.jp/exhibit/2026/10/mikamiryo.html"
-    },
-    {
-      "venue": "geidai",
-      "title": "予告 古川聖退任記念展 共振する⾳とメディア 〜メディアアート・ミュージックの現在〜 日程",
-      "start": "2026-10-03",
-      "end": "2026-10-18",
-      "category": "企画展",
-      "url": "https://museum.geidai.ac.jp/exhibit/2026/10/furukawakiyoshi.html"
-    },
-    {
-      "venue": "geidai",
-      "title": "予告 東京藝術大学と中国人留学生〜胡根天から現代まで〜展 日程",
-      "start": "2026-10-03",
-      "end": "2026-10-18",
-      "category": "企画展",
-      "url": "https://museum.geidai.ac.jp/exhibit/2026/11/chinese-students2026.html"
-    },
-    {
       "venue": "teien",
       "title": "マリメッコ展 模様のちから 開催中",
       "start": "2026-10-03",
@@ -563,6 +539,22 @@
       "end": "2026-12-20",
       "category": "企画展",
       "url": "https://panasonic.co.jp/ew/museum/"
+    },
+    {
+      "venue": "geidai",
+      "title": "予告 古川聖退任記念展 共振する⾳とメディア 〜メディアアート・ミュージックの現在〜 日程",
+      "start": "2026-10-23",
+      "end": "2026-10-25",
+      "category": "企画展",
+      "url": "https://museum.geidai.ac.jp/exhibit/2026/10/furukawakiyoshi.html"
+    },
+    {
+      "venue": "geidai",
+      "title": "予告 東京藝術大学と中国人留学生〜胡根天から現代まで〜展 日程",
+      "start": "2026-10-23",
+      "end": "2026-10-25",
+      "category": "企画展",
+      "url": "https://museum.geidai.ac.jp/exhibit/2026/11/chinese-students2026.html"
     },
     {
       "venue": "geidai",
@@ -630,7 +622,7 @@
     },
     {
       "venue": "top",
-      "title": "木村伊兵衛写真賞第50回記念写真展 B1F 展示室",
+      "title": "木村伊兵衛写真賞 第50回記念写真展 B1F 展示室",
       "start": "2026-10-31",
       "end": "2026-11-23",
       "category": "企画展",
