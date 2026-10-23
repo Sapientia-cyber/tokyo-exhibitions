@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22",
+  "generatedAt": "2026-10-23",
   "region": "東京",
   "venues": [
     {
@@ -558,7 +558,7 @@
     },
     {
       "venue": "geidai",
-      "title": "予告 東京藝術大学デザイン科×三和酒類株式会社 受託研究プロジェクト2026 iichiko PERSON AWARD 2026 EXHIBITION 日程",
+      "title": "東京藝術大学デザイン科×三和酒類株式会社 受託研究プロジェクト2026 iichiko PERSON AWARD 2026 EXHIBITION 日程",
       "start": "2026-10-23",
       "end": "2026-10-25",
       "category": "企画展",
@@ -731,6 +731,30 @@
       "end": "2027-05-30",
       "category": "コレクション展",
       "url": "https://www.artizon.museum/exhibition/detail/615"
+    },
+    {
+      "venue": "artizon",
+      "title": "Objectivity —1960–70年代のアートシーン",
+      "start": "2027-02-23",
+      "end": "2027-05-30",
+      "category": "コレクション展",
+      "url": "https://www.artizon.museum/exhibition/detail/618"
+    },
+    {
+      "venue": "artizon",
+      "title": "年間スケジュール",
+      "start": "2027-02-23",
+      "end": "2027-05-30",
+      "category": "コレクション展",
+      "url": "https://www.artizon.museum/exhibition/schedule"
+    },
+    {
+      "venue": "artizon",
+      "title": "藤島武二 —創造の軌跡",
+      "start": "2027-02-23",
+      "end": "2027-05-30",
+      "category": "コレクション展",
+      "url": "https://www.artizon.museum/exhibition/detail/617"
     },
     {
       "venue": "momat",
