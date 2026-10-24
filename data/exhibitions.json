@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23",
+  "generatedAt": "2026-10-24",
   "region": "東京",
   "venues": [
     {
@@ -395,14 +395,6 @@
       "end": "2026-12-13",
       "category": "企画展",
       "url": "https://www.nact.jp/exhibition_special/2026/louvre2026/"
-    },
-    {
-      "venue": "icc",
-      "title": "アーティスト・トーク アーティスト・トーク 小林椋",
-      "start": "2026-09-12",
-      "end": "2026-11-08",
-      "category": "企画展",
-      "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/artists-talk-kobayashi-muku-oct-24-2026/"
     },
     {
       "venue": "icc",
