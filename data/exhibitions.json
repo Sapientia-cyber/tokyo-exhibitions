@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25",
+  "generatedAt": "2026-10-26",
   "region": "東京",
   "venues": [
     {
@@ -531,30 +531,6 @@
       "end": "2026-12-20",
       "category": "企画展",
       "url": "https://panasonic.co.jp/ew/museum/"
-    },
-    {
-      "venue": "geidai",
-      "title": "予告 古川聖退任記念展 共振する⾳とメディア 〜メディアアート・ミュージックの現在〜 日程",
-      "start": "2026-10-23",
-      "end": "2026-10-25",
-      "category": "企画展",
-      "url": "https://museum.geidai.ac.jp/exhibit/2026/10/furukawakiyoshi.html"
-    },
-    {
-      "venue": "geidai",
-      "title": "予告 東京藝術大学と中国人留学生〜胡根天から現代まで〜展 日程",
-      "start": "2026-10-23",
-      "end": "2026-10-25",
-      "category": "企画展",
-      "url": "https://museum.geidai.ac.jp/exhibit/2026/11/chinese-students2026.html"
-    },
-    {
-      "venue": "geidai",
-      "title": "東京藝術大学デザイン科×三和酒類株式会社 受託研究プロジェクト2026 iichiko PERSON AWARD 2026 EXHIBITION 日程",
-      "start": "2026-10-23",
-      "end": "2026-10-25",
-      "category": "企画展",
-      "url": "https://museum.geidai.ac.jp/exhibit/2026/10/design-sanwa.html"
     },
     {
       "venue": "momat",
