@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26",
+  "generatedAt": "2026-10-27",
   "region": "東京",
   "venues": [
     {
@@ -243,38 +243,6 @@
       "end": "2027-03-30",
       "category": "企画展",
       "url": "https://museum.geidai.ac.jp/exhibit/2025/04/Toride-Annex-Storage.html"
-    },
-    {
-      "venue": "mori",
-      "title": "MAMコレクション022：ティモテウス・アンガワン・クスノ",
-      "start": "2026-04-29",
-      "end": "2026-09-23",
-      "category": "コレクション展",
-      "url": "https://www.mori.art.museum/jp/exhibitions/mamcollection022/index.html"
-    },
-    {
-      "venue": "mori",
-      "title": "MAMスクリーン023：ジョシュ・クライン",
-      "start": "2026-04-29",
-      "end": "2026-09-23",
-      "category": "小企画",
-      "url": "https://www.mori.art.museum/jp/exhibitions/mamscreen023/index.html"
-    },
-    {
-      "venue": "mori",
-      "title": "MAMリサーチ012：ディアスポラ・メモリー",
-      "start": "2026-04-29",
-      "end": "2026-09-23",
-      "category": "小企画",
-      "url": "https://www.mori.art.museum/jp/exhibitions/mamresearch012/index.html"
-    },
-    {
-      "venue": "mori",
-      "title": "ロン・ミュエク",
-      "start": "2026-04-29",
-      "end": "2026-09-23",
-      "category": "企画展",
-      "url": "https://www.mori.art.museum/jp/exhibitions/ronmueck/index.html"
     },
     {
       "venue": "momat",
@@ -557,38 +525,6 @@
       "url": "https://www.nact.jp/exhibition_special/2026/shojomanga/"
     },
     {
-      "venue": "mori",
-      "title": "MAMスクリーン024：ジャッカワーン・ニンタムロン",
-      "start": "2026-10-31",
-      "end": "2027-03-28",
-      "category": "小企画",
-      "url": "https://www.mori.art.museum/jp/exhibitions/mamscreen024/index.html"
-    },
-    {
-      "venue": "mori",
-      "title": "MAMプロジェクト035：ブリー・ルエイ",
-      "start": "2026-10-31",
-      "end": "2027-03-28",
-      "category": "小企画",
-      "url": "https://www.mori.art.museum/jp/exhibitions/mamproject035/index.html"
-    },
-    {
-      "venue": "mori",
-      "title": "森アートアワード2026 グランプリ受賞記念展：片山真理",
-      "start": "2026-10-31",
-      "end": "2027-03-28",
-      "category": "小企画",
-      "url": "https://www.mori.art.museum/jp/exhibitions/moricaf2026/index.html"
-    },
-    {
-      "venue": "mori",
-      "title": "森万里子：燦燦",
-      "start": "2026-10-31",
-      "end": "2027-03-28",
-      "category": "企画展",
-      "url": "https://www.mori.art.museum/jp/exhibitions/marikomori/index.html"
-    },
-    {
       "venue": "top",
       "title": "木村伊兵衛写真賞 第50回記念写真展 B1F 展示室",
       "start": "2026-10-31",
@@ -603,6 +539,14 @@
       "end": "2026-11-15",
       "category": "企画展",
       "url": "https://museum.geidai.ac.jp/exhibit/2026/11/bunponichi26.html"
+    },
+    {
+      "venue": "mori",
+      "title": "東京シティビュー フランス刊行80周年記念 「星の王子さま 大切なものを探しに空の旅へ」",
+      "start": "2026-11-13",
+      "end": "2027-02-14",
+      "category": "企画展",
+      "url": "https://tcv.roppongihills.com/jp/exhibitions/hoshinooujisama/"
     },
     {
       "venue": "tobikan",
@@ -747,14 +691,6 @@
       "end": "2027-08-22",
       "category": "特別展",
       "url": "https://www.tobikan.jp/exhibition/2027_dufy.html"
-    },
-    {
-      "venue": "mori",
-      "title": "世界はあそびでできている：アート・子ども・社会",
-      "start": "2027-04-29",
-      "end": "2027-09-23",
-      "category": "企画展",
-      "url": "https://www.mori.art.museum/jp/exhibitions/play/index.html"
     },
     {
       "venue": "artizon",
