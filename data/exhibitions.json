@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05",
+  "generatedAt": "2026-11-06",
   "region": "東京",
   "venues": [
     {
@@ -307,14 +307,6 @@
       "end": "2026-11-08",
       "category": "企画展",
       "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/icc-annual-2026/"
-    },
-    {
-      "venue": "shoto",
-      "title": "没後50年 髙島野十郎展",
-      "start": "2026-07-04",
-      "end": "2026-09-06",
-      "category": "企画展",
-      "url": "https://shoto-museum.jp/exhibitions/212takashima/"
     },
     {
       "venue": "tobikan",
