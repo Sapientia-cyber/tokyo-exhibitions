@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15",
+  "generatedAt": "2026-11-17",
   "region": "東京",
   "venues": [
     {
@@ -493,22 +493,6 @@
       "url": "https://topmuseum.jp/exhibition/5478/"
     },
     {
-      "venue": "geidai",
-      "title": "ブンポニチ／⽂保⽇・展2026 日程",
-      "start": "2026-11-11",
-      "end": "2026-11-15",
-      "category": "企画展",
-      "url": "https://museum.geidai.ac.jp/exhibit/2026/11/bunponichi26.html"
-    },
-    {
-      "venue": "geidai",
-      "title": "予告 東京藝術大学と中国人留学生〜胡根天から現代まで〜展 日程",
-      "start": "2026-11-11",
-      "end": "2026-11-15",
-      "category": "企画展",
-      "url": "https://museum.geidai.ac.jp/exhibit/2026/11/chinese-students2026.html"
-    },
-    {
       "venue": "mori",
       "title": "東京シティビュー フランス刊行80周年記念 「星の王子さま 大切なものを探しに空の旅へ」",
       "start": "2026-11-13",
@@ -547,6 +531,14 @@
       "end": "2026-12-02",
       "category": "企画展",
       "url": "https://museum.geidai.ac.jp/exhibit/2026/11/gmk2026.html"
+    },
+    {
+      "venue": "geidai",
+      "title": "予告 取手藝祭2026 日程",
+      "start": "2026-11-21",
+      "end": "2026-11-22",
+      "category": "企画展",
+      "url": "https://museum.geidai.ac.jp/exhibit/2026/11/2026toride-geisai.html"
     },
     {
       "venue": "tsg",
