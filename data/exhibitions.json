@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19",
+  "generatedAt": "2026-11-20",
   "region": "東京",
   "venues": [
     {
@@ -526,7 +526,7 @@
     },
     {
       "venue": "geidai",
-      "title": "予告 芸術未来研究場展2026 日程",
+      "title": "芸術未来研究場展2026 日程",
       "start": "2026-11-20",
       "end": "2026-12-02",
       "category": "企画展",
@@ -643,6 +643,14 @@
       "end": "2027-05-30",
       "category": "コレクション展",
       "url": "https://www.artizon.museum/exhibition/detail/617"
+    },
+    {
+      "venue": "geidai",
+      "title": "予告 藝大取手コレクション展2027 もっと！取手の藝大美術館 Geidai TORIDE Collection 2027 Welcome, Again! 日程",
+      "start": "2027-03-06",
+      "end": "2027-03-22",
+      "category": "企画展",
+      "url": "https://museum.geidai.ac.jp/exhibit/2027/03/toride-collection27.html"
     },
     {
       "venue": "momat",
