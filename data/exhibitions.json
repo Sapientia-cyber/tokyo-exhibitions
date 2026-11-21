@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20",
+  "generatedAt": "2026-11-21",
   "region": "東京",
   "venues": [
     {
@@ -243,14 +243,6 @@
       "end": "2027-03-30",
       "category": "企画展",
       "url": "https://museum.geidai.ac.jp/exhibit/2025/04/Toride-Annex-Storage.html"
-    },
-    {
-      "venue": "nact",
-      "title": "ピカソ meets ポール・スミス 遊び心の冒険へ",
-      "start": "2026-06-10",
-      "end": "2026-09-21",
-      "category": "企画展",
-      "url": "https://www.nact.jp/exhibition_special/2026/picasso_paulsmith/"
     },
     {
       "venue": "mimt",
@@ -534,7 +526,7 @@
     },
     {
       "venue": "geidai",
-      "title": "予告 取手藝祭2026 日程",
+      "title": "取手藝祭2026 日程",
       "start": "2026-11-21",
       "end": "2026-11-22",
       "category": "企画展",
