@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22",
+  "generatedAt": "2026-11-23",
   "region": "東京",
   "venues": [
     {
@@ -243,14 +243,6 @@
       "end": "2027-03-30",
       "category": "企画展",
       "url": "https://museum.geidai.ac.jp/exhibit/2025/04/Toride-Annex-Storage.html"
-    },
-    {
-      "venue": "mimt",
-      "title": "\"カフェ\"に集う芸術家 ―印象派からゴッホ、ロートレック、ピカソまで",
-      "start": "2026-06-13",
-      "end": "2026-09-23",
-      "category": "企画展",
-      "url": "https://mimt.jp/"
     },
     {
       "venue": "icc",
