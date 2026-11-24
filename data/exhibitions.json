@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23",
+  "generatedAt": "2026-11-24",
   "region": "東京",
   "venues": [
     {
@@ -469,14 +469,6 @@
       "url": "https://www.nact.jp/exhibition_special/2026/shojomanga/"
     },
     {
-      "venue": "top",
-      "title": "木村伊兵衛写真賞 第50回記念写真展 B1F 展示室",
-      "start": "2026-10-31",
-      "end": "2026-11-23",
-      "category": "企画展",
-      "url": "https://topmuseum.jp/exhibition/5478/"
-    },
-    {
       "venue": "mori",
       "title": "東京シティビュー フランス刊行80周年記念 「星の王子さま 大切なものを探しに空の旅へ」",
       "start": "2026-11-13",
@@ -515,14 +507,6 @@
       "end": "2026-12-02",
       "category": "企画展",
       "url": "https://museum.geidai.ac.jp/exhibit/2026/11/gmk2026.html"
-    },
-    {
-      "venue": "geidai",
-      "title": "取手藝祭2026 日程",
-      "start": "2026-11-21",
-      "end": "2026-11-22",
-      "category": "企画展",
-      "url": "https://museum.geidai.ac.jp/exhibit/2026/11/2026toride-geisai.html"
     },
     {
       "venue": "tsg",
