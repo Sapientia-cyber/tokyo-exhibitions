@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26",
+  "generatedAt": "2026-11-27",
   "region": "東京",
   "venues": [
     {
@@ -245,30 +245,6 @@
       "url": "https://museum.geidai.ac.jp/exhibit/2025/04/Toride-Annex-Storage.html"
     },
     {
-      "venue": "icc",
-      "title": "展示 5Fロビー 無料展示エリア",
-      "start": "2026-06-20",
-      "end": "2026-11-08",
-      "category": "企画展",
-      "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/5th-floor-lobby-from-jun-20-2026/"
-    },
-    {
-      "venue": "icc",
-      "title": "展示 リサーチ・コンプレックス NTT R＆D @ICC 「身体性BEYOND」",
-      "start": "2026-06-20",
-      "end": "2026-11-08",
-      "category": "企画展",
-      "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/beyond-embodiment-from-jun-20-2026/"
-    },
-    {
-      "venue": "icc",
-      "title": "展示, ICC アニュアル ICC アニュアル 2026 遺す／残る／受けとめる",
-      "start": "2026-06-20",
-      "end": "2026-11-08",
-      "category": "企画展",
-      "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/icc-annual-2026/"
-    },
-    {
       "venue": "tobikan",
       "title": "開館100周年記念 この場所の風景―上野・大牟田・ブエノスアイレス",
       "start": "2026-07-23",
@@ -317,22 +293,6 @@
       "url": "https://www.nact.jp/exhibition_special/2026/louvre2026/"
     },
     {
-      "venue": "icc",
-      "title": "展示, エマージェンシーズ！ エマージェンシーズ！ 049 杉田碧《二十一世紀の空蝉》",
-      "start": "2026-09-12",
-      "end": "2026-11-08",
-      "category": "企画展",
-      "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/emergencies-049-sugita-aoi/"
-    },
-    {
-      "venue": "icc",
-      "title": "上映 上映プログラム",
-      "start": "2026-09-19",
-      "end": "2026-11-08",
-      "category": "企画展",
-      "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/icc-annual-2026-screening-program/"
-    },
-    {
       "venue": "sompo",
       "title": "の展覧会 開館50周年記念 アルベール・マルケ展",
       "start": "2026-09-22",
@@ -347,14 +307,6 @@
       "end": "2026-12-13",
       "category": "企画展",
       "url": "https://www.sompo-museum.org/exhibitions/2025/albertmarquet/"
-    },
-    {
-      "venue": "icc",
-      "title": "展示 ハイパーICC",
-      "start": "2026-09-29",
-      "end": "2026-11-08",
-      "category": "企画展",
-      "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/hyper-icc-annual-2026/"
     },
     {
       "venue": "momat",
@@ -523,6 +475,22 @@
       "end": "2027-01-24",
       "category": "特別展",
       "url": "https://www.edo-tokyo-museum.or.jp/"
+    },
+    {
+      "venue": "icc",
+      "title": "展示 5Fロビー 無料展示エリア",
+      "start": "2026-12-05",
+      "end": "2027-03-07",
+      "category": "企画展",
+      "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/5th-floor-lobby-from-dec-05-2026/"
+    },
+    {
+      "venue": "icc",
+      "title": "展示, 企画展 わたしの身体はだれのもの？",
+      "start": "2026-12-05",
+      "end": "2027-03-07",
+      "category": "企画展",
+      "url": "https://www.ntticc.or.jp/ja/exhibitions/2026/who-decides-what-this-body-is/"
     },
     {
       "venue": "geidai",
